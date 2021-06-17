@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  explosionFactory: {fileID: 100000, guid: f79a957be6dbe8c4fa77fbad107944ab, type: 3}
 --- !u!54 &7379736951958220409
 Rigidbody:
   m_ObjectHideFlags: 0

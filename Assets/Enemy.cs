@@ -38,8 +38,15 @@ public class Enemy : MonoBehaviour
         transform.position += dir * speed * Time.deltaTime;
     }
 
+
+    public GameObject explosionFactory;
     private void OnCollisionEnter(Collision other)
     {
+        // 여기가 적과 총알이 부딪히는 순간
+        // 1. 시각 효과 공장에서 시각 효과를 만들어서
+        GameObject explosion = Instantiate(explosionFactory);
+        // 2. 내 위치에 가져다 놓고싶다.
+        explosion.transform.position = transform.position;
         // 너죽고
         Destroy(other.gameObject);
         // 나죽자
